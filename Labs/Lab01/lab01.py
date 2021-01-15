@@ -12,5 +12,9 @@ def main():
     numFive = requests.get("http://www.google.com/")
     print(numFive.status_code)
     
+    # Downloads itself from GitHub and prints out its own source code from GitHub
+    rawURL = "https://raw.githubusercontent.com/Nebye/Cmput404/main/Labs/Lab01/lab01.py"
+    print(requests.get(rawURL).text)
+    
 
 main()
